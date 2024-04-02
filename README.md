@@ -1,2 +1,2 @@
-# Bilgi-G-venli-ine-Giri-
+# Bilgi-Güvenliğine-Giriş
 şifreleme ve kriptoloji teknikleri
