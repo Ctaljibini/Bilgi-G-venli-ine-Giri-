@@ -74,6 +74,7 @@
             this.decrypt.TabIndex = 1;
             this.decrypt.Text = "decrypt";
             this.decrypt.UseVisualStyleBackColor = true;
+            this.decrypt.Click += new System.EventHandler(this.decrypt_Click);
             // 
             // label2
             // 

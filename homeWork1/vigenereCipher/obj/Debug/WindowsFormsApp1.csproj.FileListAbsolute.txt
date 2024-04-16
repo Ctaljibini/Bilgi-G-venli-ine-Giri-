@@ -8,3 +8,13 @@ C:\Users\New-Phone\Desktop\BM ozel konular\homeWork1\WindowsFormsApp1\obj\Debug\
 C:\Users\New-Phone\Desktop\BM ozel konular\homeWork1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\New-Phone\Desktop\BM ozel konular\homeWork1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\New-Phone\Desktop\BM ozel konular\homeWork1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\bin\Debug\WindowsFormsApp1.exe
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.exe
+C:\Users\New-Phone\Desktop\repos\Bilgi-G-venli-ine-Giri-\homeWork1\vigenereCipher\obj\Debug\WindowsFormsApp1.pdb
