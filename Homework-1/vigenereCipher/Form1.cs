@@ -19,18 +19,23 @@ namespace WindowsFormsApp1
         Vigenere vigenere = new Vigenere();
         public Form1()
         {
-            InitializeComponent(); // sadece okumak için kullanıyorum.
+            InitializeComponent(); 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            output.ReadOnly = true;
+            output.ReadOnly = true; // sadece okumak için kullanıyorum.
 
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         private void encrypt_Click(object sender, EventArgs e)
@@ -43,15 +48,6 @@ namespace WindowsFormsApp1
             output.AppendText(cipher + Environment.NewLine);
 
         }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-
-        // karakterlerin ineks numarası 0'dan 25'e
-      
 
         private void decrypt_Click(object sender, EventArgs e)
         {

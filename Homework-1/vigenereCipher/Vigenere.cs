@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,20 +10,24 @@ namespace WindowsFormsApp1
     internal class Vigenere
     {
         public static string alphaChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ().,?!";
-        public List<int> GetCharIndexes(string str)
+
+        // karakterlerin ineks numarası 0'dan 25'e
+        public int[] getCharIndex1(string txt)
         {
-            List<int> charsAtPos = new List<int>();
-            for (int i = 0; i < str.Length; i++)
+            int size = txt.Length;
+            int[] index = new int[size];
+
+            for (int i = 0; i < size; i++)
             {
-                charsAtPos.Add(alphaChars.IndexOf(str[i]));
+                index[i] += alphaChars.IndexOf(txt[i]);
             }
-            return charsAtPos;
+            return index;
         }
 
         public string encryption(string message, string key)
         {
-            List<int> messageCharIndex = GetCharIndexes(message);
-            List<int> keyCharIndex = GetCharIndexes(key);
+            int[] messageCharIndex = getCharIndex1(message);
+            int[] keyCharIndex = getCharIndex1(key);
             string cipher = "";
 
             int textLength = message.Length;
@@ -39,8 +44,8 @@ namespace WindowsFormsApp1
 
         public string decryption(string cipher, string key)
         {
-            List<int> cipherCharIndex = GetCharIndexes(cipher);
-            List<int> keyCharIndex = GetCharIndexes(key);
+            int[] cipherCharIndex = getCharIndex1(cipher);
+            int[] keyCharIndex = getCharIndex1(key);
 
             int cipherLength = cipher.Length;
             int keyLength = key.Length;
@@ -53,6 +58,19 @@ namespace WindowsFormsApp1
                 message += alphaChars[letter];
             }
             return message;
+        }
+
+        public int[] GetCharsIndexes(string txt)
+        {
+            int size = txt.Length;
+            int[] indexes = new int[size];
+            int temp = 0;
+            for(int i = 0; i < size; i++)
+            {
+                temp = alphaChars.IndexOf(txt[i]);
+                indexes[i] = temp;
+            }
+            return indexes;
         }
     }
 }
