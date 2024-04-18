@@ -32,12 +32,12 @@ namespace WindowsFormsApp1
 
             int textLength = message.Length;
             int keyLength = key.Length;
-            int letter;
+            int temp;
 
             for (int n = 0; n < textLength; n++)
             {
-                letter = (messageCharIndex[n] + keyCharIndex[n % keyLength]) % alphaChars.Length;
-                cipher += alphaChars[letter];
+                temp = (messageCharIndex[n] + keyCharIndex[n % keyLength]) % alphaChars.Length;
+                cipher += alphaChars[temp];
             }
             return cipher;
         }

@@ -33,10 +33,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void encrypt_Click(object sender, EventArgs e)
         {
