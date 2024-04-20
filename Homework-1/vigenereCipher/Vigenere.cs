@@ -11,66 +11,56 @@ namespace WindowsFormsApp1
     {
         public static string alphaChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ().,?!";
 
-        // karakterlerin ineks numarası 0'dan 25'e
-        public int[] getCharIndex1(string txt)
+        // Bir string alıp, bir tamsayı dizisi döndürür.
+        public int[] getCharIndex(string txt)
         {
             int size = txt.Length;
             int[] index = new int[size];
 
             for (int i = 0; i < size; i++)
             {
-                index[i] += alphaChars.IndexOf(txt[i]);
+                index[i] += alphaChars.IndexOf(txt[i]); // index'leri diziye ekle.
             }
             return index;
         }
 
+        // Şifreleme Fonksiyonu
         public string encryption(string message, string key)
         {
-            int[] messageCharIndex = getCharIndex1(message);
-            int[] keyCharIndex = getCharIndex1(key);
+            int[] messageCharIndex = getCharIndex(message);  // mesajın index'ler dizisi 
+            int[] keyCharIndex = getCharIndex(key);          // Anahtar index'ler dizisi
             string cipher = "";
 
-            int textLength = message.Length;
+            int messageLength = message.Length;
             int keyLength = key.Length;
             int temp;
 
-            for (int n = 0; n < textLength; n++)
-            {
-                temp = (messageCharIndex[n] + keyCharIndex[n % keyLength]) % alphaChars.Length;
+            for (int n = 0; n < messageLength; n++)
+            {   // P + K = C mod(26), 26 alfabe için. Bu sistem büyük / küçük harfleri ve temel karakterleri içeriyor.
+                temp = (messageCharIndex[n] + keyCharIndex[n % keyLength]) % alphaChars.Length; 
+                                                         // anahtar uzunluğu yetmediği durumda tekrarlansın
                 cipher += alphaChars[temp];
             }
             return cipher;
         }
 
+        // Deşifreleme Fonksiyonu
         public string decryption(string cipher, string key)
         {
-            int[] cipherCharIndex = getCharIndex1(cipher);
-            int[] keyCharIndex = getCharIndex1(key);
+            int[] cipherCharIndex = getCharIndex(cipher);
+            int[] keyCharIndex = getCharIndex(key);
 
             int cipherLength = cipher.Length;
             int keyLength = key.Length;
             string message = "";
-            int letter;
+            int temp;
 
             for (int n = 0; n < cipherLength; n++)
-            {
-                letter = (cipherCharIndex[n] - keyCharIndex[n % keyLength] + alphaChars.Length) % alphaChars.Length;
-                message += alphaChars[letter];
+            {   // C - K = P mod(26)
+                temp = (cipherCharIndex[n] - keyCharIndex[n % keyLength] + alphaChars.Length) % alphaChars.Length; 
+                message += alphaChars[temp];
             }
             return message;
-        }
-
-        public int[] GetCharsIndexes(string txt)
-        {
-            int size = txt.Length;
-            int[] indexes = new int[size];
-            int temp = 0;
-            for(int i = 0; i < size; i++)
-            {
-                temp = alphaChars.IndexOf(txt[i]);
-                indexes[i] = temp;
-            }
-            return indexes;
         }
     }
 }

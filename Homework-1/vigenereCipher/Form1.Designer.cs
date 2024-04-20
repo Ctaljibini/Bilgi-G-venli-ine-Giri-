@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System;
+
+namespace WindowsFormsApp1
 {
     partial class Form1
     {
@@ -48,9 +50,9 @@
             // 
             // encrypt
             // 
-            this.encrypt.Location = new System.Drawing.Point(191, 135);
+            this.encrypt.Location = new System.Drawing.Point(183, 123);
             this.encrypt.Name = "encrypt";
-            this.encrypt.Size = new System.Drawing.Size(75, 23);
+            this.encrypt.Size = new System.Drawing.Size(88, 23);
             this.encrypt.TabIndex = 1;
             this.encrypt.Text = "encrypt";
             this.encrypt.UseVisualStyleBackColor = true;
@@ -58,7 +60,7 @@
             // 
             // inputBox
             // 
-            this.inputBox.Location = new System.Drawing.Point(98, 32);
+            this.inputBox.Location = new System.Drawing.Point(84, 32);
             this.inputBox.Multiline = true;
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(196, 33);
@@ -66,9 +68,9 @@
             // 
             // decrypt
             // 
-            this.decrypt.Location = new System.Drawing.Point(110, 135);
+            this.decrypt.Location = new System.Drawing.Point(89, 123);
             this.decrypt.Name = "decrypt";
-            this.decrypt.Size = new System.Drawing.Size(75, 23);
+            this.decrypt.Size = new System.Drawing.Size(88, 23);
             this.decrypt.TabIndex = 1;
             this.decrypt.Text = "decrypt";
             this.decrypt.UseVisualStyleBackColor = true;
@@ -85,7 +87,7 @@
             // 
             // keyBox
             // 
-            this.keyBox.Location = new System.Drawing.Point(98, 71);
+            this.keyBox.Location = new System.Drawing.Point(84, 71);
             this.keyBox.Multiline = true;
             this.keyBox.Name = "keyBox";
             this.keyBox.Size = new System.Drawing.Size(196, 33);
@@ -93,9 +95,9 @@
             // 
             // output
             // 
-            this.output.Location = new System.Drawing.Point(300, 32);
+            this.output.Location = new System.Drawing.Point(286, 32);
             this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(275, 268);
+            this.output.Size = new System.Drawing.Size(289, 268);
             this.output.TabIndex = 3;
             this.output.Text = "";
             this.output.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -119,6 +121,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
 

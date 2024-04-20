@@ -33,11 +33,11 @@ namespace WindowsFormsApp1
 
         }
 
-
         private void encrypt_Click(object sender, EventArgs e)
         {
             string txt = inputBox.Text;
             string key = keyBox.Text;
+            // Boş girdi ise bir uyarı mesajı
             if (string.IsNullOrEmpty(txt) || string.IsNullOrEmpty(key))
                 MessageBox.Show("Please fill out the previous fields");
             string cipher = vigenere.encryption(txt, key);
@@ -49,7 +49,8 @@ namespace WindowsFormsApp1
         {
             string cipher = inputBox.Text;
             string key = keyBox.Text;
-            
+
+            // Boş girdi ise bir uyarı mesajı
             if (string.IsNullOrEmpty(cipher) || string.IsNullOrEmpty(key))
                 MessageBox.Show("Please fill out the previous fields");
 
